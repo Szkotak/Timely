@@ -1,0 +1,26 @@
+.container {
+    width: 960px;
+}
+
+.inputs {
+    width: 960px;
+    height: 400px;
+    background: lightgray;
+    border-style: solid;
+    border: 1px;
+    border-color: gray;
+    margin: 100px auto;
+}
+
+.current {
+    width: 50px;
+    height: 200px;
+    background: lightgray;
+
+}
+
+.goals {
+    width: 100px;
+    height: 200px;
+    background: lightgray;
+}
