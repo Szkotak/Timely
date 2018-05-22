@@ -1,21 +1,24 @@
 .container {
     width: 960px;
+    text-align: center;
 }
 
 .inputs {
     width: 960px;
-    height: 400px;
+    height: 150px;
     background: lightgray;
     border-style: solid;
     border: 1px;
     border-color: gray;
     margin: 100px auto;
+    text-align: center;
 }
 
 .current {
     width: 50px;
     height: 200px;
     background: lightgray;
+    text-align: center;
 
 }
 
@@ -23,4 +26,5 @@
     width: 100px;
     height: 200px;
     background: lightgray;
+    text-align: center;
 }
