@@ -16,6 +16,10 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
    <script src="./assets/javascript/main.js"></script>
+
+   <!-- Slider -->
+    <!-- <link rel="stylesheet" href="./assets/noUiSlider.11.1.0/nouislider.css">
+    <script src="./assets/noUiSlider.11.1.0/nouislider.js"></script> -->
 </head>
 <body>
     <div class="header">
@@ -28,11 +32,11 @@
     </div>
     <div class="container">
         <div class="inputs">
-        <div class="Question">
-            <p id="activeQuestion"><h4>What are your top 5 Weekly Activities (e.g. Sleep, Work, ect.)</h4></p>
-        </div>
-        <div class="row init-input">
-            <form class="col s12">
+            <div class="Question">
+            <p id="activeQuestion"><h3>What are your top 5 Weekly Activities</h3>(e.g. Sleep, Work, ect.)</p>
+            </div>
+            <div class="row init-input">
+             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
                       <input id="act1" type="email">
@@ -64,11 +68,48 @@
                     </div>
                 </div>
                 <a class="button1 waves-effect waves-light btn-large"><i class="material-icons right">chevron_right</i>Submit</a>
-            </form>
+                </form>
+            </div>
         </div>
+
+        <div id="current-input">
+            
+            <div><h3>Current Hours:</h3></div>
+
+            <div>Activity 1
+                    <form action="#">
+                            <p class="range-field">
+                              <input type="range" id="test5" min="0" max="100" />
+                            </p>
+                          </form>
+                
+            </div>  
+            
+            <div>Activity 2
+                <p class="range-field">
+                    <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+            
+            <div>Activity 3
+                 <p class="range-field">
+                    <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+            <div>Activity 4
+                <p class="range-field">
+                     <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+            <div>Activity 5
+                <p class="range-field">
+                    <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+
         </div>
         
-        <div class="outputs row">
+        <!-- <div class="outputs row">
             <div class="current col s4">
                 <p>fuewhjkhskfljh</p>
 
@@ -81,7 +122,7 @@
                 <p>dfjdskjfhdskjahfjh</p>
 
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>
