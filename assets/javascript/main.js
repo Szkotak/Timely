@@ -13,7 +13,7 @@ $( document ).ready(function() {
             }
             labels.push("Other");
             console.log(labels);
-            $(".inputs").attr("class", "animated bounceOutDown")
+            $(".inputs").attr("class", "animated hinge")
             $(".container").prepend($(".current-input").animate("bounceInRight"));
             // $(".current-input").attr("class", "animated bounceInRight");
 
@@ -48,7 +48,7 @@ $( document ).ready(function() {
         }
         data.push(otherTime);
         console.log(data);
-        $(".current-input").attr("class", "animated bounceOutDown")
+        $(".current-input").attr("class", "animated hinge")
         $(".container").prepend($(".goal-input").animate("bounceInRight"));
         // $(".current-input").attr("class", "animated bounceInRight");
 
