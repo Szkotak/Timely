@@ -2,6 +2,7 @@
 //   M.textareaAutoResize($('#textarea1'));
 var labels = [];
 var data = [];
+var otherTime = 168;
 
 $( document ).ready(function() {
     $(".button1").on("click", function(){
@@ -12,10 +13,10 @@ $( document ).ready(function() {
             }
             labels.push("Other");
             console.log(labels);
-            $(".inputs").attr("class", "animated lightSpeedOut")
+            $(".inputs").attr("class", "animated hinge")
             $(".container").prepend($(".current-input").animate("bounceInRight"));
             // $(".current-input").attr("class", "animated bounceInRight");
-            
+
             $("#Activity1").text(labels[0]);
             $("#Activity2").text(labels[1]);
             $("#Activity3").text(labels[2]);
@@ -27,20 +28,32 @@ $( document ).ready(function() {
        
     });
 
-    
+    $( function() {
+        var handle = $( "#custom-handle" );
+        $( "#slider" ).slider({
+          create: function() {
+            handle.text( $( this ).slider( "value" ) );
+          },
+          slide: function( event, ui ) {
+            handle.text( ui.value );
+          }
+        });
+    });
+
+    $(".button2").on("click", function(){
+        for (var i = 1; i < 6; i++) {
+            var hours = $("#slider" + i).val();
+            otherTime -= hours
+            data.push(parseInt(hours));
+        }
+        data.push(otherTime);
+        console.log(data);
+    });
+
+
 });
 
-$( function() {
-    var handle = $( "#custom-handle" );
-    $( "#slider" ).slider({
-      create: function() {
-        handle.text( $( this ).slider( "value" ) );
-      },
-      slide: function( event, ui ) {
-        handle.text( ui.value );
-      }
-    });
-  });
+
 
 
 //create a function tha clears the form and replaces it with sliders using the new user input as the activities
