@@ -25,11 +25,12 @@
    
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
  
 </head>
 <body>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <div class="header">
             <nav>
                     <div class="nav-wrapper teal lighten-1">
@@ -95,7 +96,7 @@
             
             <div>Activity 2
                 <p class="range-field">
-                    <input type="range" id="slider" min="0" max="100" />
+                        <input type="range" min="5" max="100" id="slider" oninput="showVal(this.value)" onchange="showVal(this.value)">
                 </p>
             </div>
             

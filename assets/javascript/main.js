@@ -34,6 +34,9 @@ $( function() {
         handle.text( ui.value );
       }
     });
+    $(".selector").slider({
+        animate: "fast"
+    });
   } );
 
 
