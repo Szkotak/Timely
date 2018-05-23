@@ -15,13 +15,19 @@ $( document ).ready(function() {
             $(".inputs").attr("class", "animated lightSpeedOut")
             $(".container").prepend($(".current-input").animate("bounceInRight"));
             // $(".current-input").attr("class", "animated bounceInRight");
+            
+            $("#Activity1").text(labels[0]);
+            $("#Activity2").text(labels[1]);
+            $("#Activity3").text(labels[2]);
+            $("#Activity4").text(labels[3]);
+            $("#Activity5").text(labels[4]);
         } else {
             console.log("empty");
         }
        
     });
+
     
-   
 });
 
 $( function() {
@@ -34,7 +40,7 @@ $( function() {
         handle.text( ui.value );
       }
     });
-  } );
+  });
 
 
 //create a function tha clears the form and replaces it with sliders using the new user input as the activities
