@@ -11,6 +11,7 @@ $( document ).ready(function() {
                 data.push(activity);
             }
             data.push("Other");
+            $(.init-input).fadeOut(400,function());
             console.log(data);
         } else {
             console.log("empty");
