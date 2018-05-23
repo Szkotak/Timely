@@ -16,8 +16,20 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
    <script src="./assets/javascript/main.js"></script>
+
+   <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+   <!-- Slider -->
+   
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ 
 </head>
 <body>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <div class="header">
             <nav>
                     <div class="nav-wrapper teal lighten-1">
@@ -27,12 +39,13 @@
 
     </div>
     <div class="container">
-        <div class="inputs">
-        <div class="Question">
-            <p id="activeQuestion"><h4>What are your top 5 Weekly Activities (e.g. Sleep, Work, ect.)</h4></p>
-        </div>
-        <div class="row init-input">
-            <form class="col s12">
+        <div class="inputs"> 
+            <!-- how to make it on click -->
+            <div class="Question">
+            <p id="activeQuestion"><h3>What are your top 5 Weekly Activities</h3>(e.g. Sleep, Work, ect.)</p>
+            </div>
+            <div class="row init-input">
+             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
                       <input id="act1" type="email">
@@ -64,11 +77,47 @@
                     </div>
                 </div>
                 <a class="button1 waves-effect waves-light btn-large"><i class="material-icons right">chevron_right</i>Submit</a>
-            </form>
+                </form>
+            </div>
         </div>
+
+        <div class="current-input  animated bounceInRight">
+            
+            <div><h3>Current Hours:</h3></div>
+
+            <div>Activity 1
+                    <div id="slider">
+                            <div id="custom-handle" class="ui-slider-handle"></div>
+                          </div>
+                           
+                
+            </div>  
+            
+            <div>Activity 2
+                <p class="range-field">
+                    <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+            
+            <div>Activity 3
+                 <p class="range-field">
+                    <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+            <div>Activity 4
+                <p class="range-field">
+                     <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+            <div>Activity 5
+                <p class="range-field">
+                    <input type="range" id="slider" min="0" max="100" />
+                </p>
+            </div>
+
         </div>
         
-        <div class="outputs row">
+        <!-- <div class="outputs row">
             <div class="current col s4">
                 <p>fuewhjkhskfljh</p>
 
@@ -81,7 +130,7 @@
                 <p>dfjdskjfhdskjahfjh</p>
 
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

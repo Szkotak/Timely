@@ -6,25 +6,51 @@
 .inputs {
     width: 960px;
     height: auto;
-    background: lightgray;
-    border-style: solid;
+    Color: #4db6ac;
+    background: rgb(230, 230, 230);
     border: 1px;
-    border-color: gray;
-    margin: 100px auto;
+    border-style: solid; 
+    border-color: lightgrey;
+    margin: 70px auto;
     text-align: center;
    
 }
 .init-input {
-    padding: 20px;
+    padding: 0px 20px;
 
 }
 
 #activeQuestion {
-    padding-top: 10px;
+    text-align: center;
 
 }
-
-.current {
+.current-input {
+    /* display: none; */
+    width: 960px;
+    height: auto;
+    Color: #4db6ac;
+    background: rgb(230, 230, 230);
+    border: 1px;
+    border-style: solid; 
+    border-color: lightgrey;
+    margin: 70px auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#slider {
+    padding: 5px 100px;
+    border: none;
+    
+}
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+/* .current {
     width: 50px;
     height: 200px;
     background: lightgray;
@@ -37,4 +63,4 @@
     height: 200px;
     background: lightgray;
     text-align: center;
-}
+} */
