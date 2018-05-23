@@ -19,7 +19,6 @@ $( document ).ready(function() {
         
         
 
-        $('#initiallyHiddenBlock').show();
     });
     
 });
@@ -36,20 +35,7 @@ $( function() {
     });
   } );
 
-// var slider = document.getElementById('slider');
-// noUiSlider.create(slider, {
-//  start: [20, 80],
-//  connect: true,
-//  step: 1,
-//  orientation: 'horizontal', // 'horizontal' or 'vertical'
-//  range: {
-//    'min': 0,
-//    'max': 100
-//  },
-//  format: wNumb({
-//    decimals: 0
-//  })
-// });
+
 //create a function tha clears the form and replaces it with sliders using the new user input as the activities
 
 // once the user inputs variables with the data of current activity save in local
