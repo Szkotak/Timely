@@ -12,15 +12,16 @@ $( document ).ready(function() {
             }
             labels.push("Other");
             console.log(labels);
+            $(".inputs").attr("class", "animated lightSpeedOut")
+            $(".container").prepend($(".current-input").animate("bounceInRight"));
+            // $(".current-input").attr("class", "animated bounceInRight");
         } else {
             console.log("empty");
         }
-        
-        
-        
-
+       
     });
     
+   
 });
 
 $( function() {
