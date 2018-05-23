@@ -42,7 +42,23 @@
     z-index: 2;
    
 }
-#slider {
+.goal-input {
+    /* visibility: hidden; */
+    width: 960px;
+    height: auto;
+    Color: #4db6ac;
+    background: rgb(230, 230, 230);
+    border: 1px;
+    border-style: solid; 
+    border-color: lightgrey;
+    margin: 70px auto;
+    text-align: center;
+    padding-bottom: 20px;
+    position: absolute;
+    z-index: 1;
+   
+}
+.range-field {
     padding: 5px 100px;
     border: none;
     

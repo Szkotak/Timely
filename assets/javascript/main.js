@@ -28,17 +28,17 @@ $( document ).ready(function() {
        
     });
 
-    $( function() {
-        var handle = $( "#custom-handle" );
-        $( "#slider" ).slider({
-          create: function() {
-            handle.text( $( this ).slider( "value" ) );
-          },
-          slide: function( event, ui ) {
-            handle.text( ui.value );
-          }
-        });
-    });
+    // $( function() {
+    //     var handle = $( "#custom-handle" );
+    //     $( "#slider" ).slider({
+    //       create: function() {
+    //         handle.text( $( this ).slider( "value" ) );
+    //       },
+    //       slide: function( event, ui ) {
+    //         handle.text( ui.value );
+    //       }
+    //     });
+    // });
 
     $(".button2").on("click", function(){
         for (var i = 1; i < 6; i++) {
@@ -48,11 +48,20 @@ $( document ).ready(function() {
         }
         data.push(otherTime);
         console.log(data);
+        $(".current-input").attr("class", "animated hinge")
+        $(".container").prepend($(".goal-input").animate("bounceInRight"));
+        // $(".current-input").attr("class", "animated bounceInRight");
+
+        $("#Activity1").text(labels[0]);
+        $("#Activity2").text(labels[1]);
+        $("#Activity3").text(labels[2]);
+        $("#Activity4").text(labels[3]);
+        $("#Activity5").text(labels[4]);
     });
 
 
 });
-
+ //**Find a way to distinguish bewtween the current and goal arrays */
 
 
 
