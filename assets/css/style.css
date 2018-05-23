@@ -25,6 +25,7 @@
 
 }
 .current-input {
+    /* display: none; */
     width: 960px;
     height: auto;
     Color: #4db6ac;
@@ -36,12 +37,19 @@
     text-align: center;
     padding-bottom: 20px;
 }
-
 #slider {
     padding: 5px 100px;
     border: none;
     
 }
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
 /* .current {
     width: 50px;
     height: 200px;

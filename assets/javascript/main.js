@@ -15,9 +15,26 @@ $( document ).ready(function() {
         } else {
             console.log("empty");
         }
+        
+        
+        
+
+        $('#initiallyHiddenBlock').show();
     });
     
 });
+
+$( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  } );
 
 // var slider = document.getElementById('slider');
 // noUiSlider.create(slider, {

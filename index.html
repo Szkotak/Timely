@@ -17,11 +17,20 @@
     crossorigin="anonymous"></script>
    <script src="./assets/javascript/main.js"></script>
 
+   <link rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
    <!-- Slider -->
+   
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
     <!-- <link rel="stylesheet" href="./assets/noUiSlider.11.1.0/nouislider.css">
     <script src="./assets/noUiSlider.11.1.0/nouislider.js"></script> -->
 </head>
 <body>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <div class="header">
             <nav>
                     <div class="nav-wrapper teal lighten-1">
@@ -31,7 +40,8 @@
 
     </div>
     <div class="container">
-        <div class="inputs">
+        <div class="inputs"> 
+            <!-- how to make it on click -->
             <div class="Question">
             <p id="activeQuestion"><h3>What are your top 5 Weekly Activities</h3>(e.g. Sleep, Work, ect.)</p>
             </div>
@@ -72,16 +82,15 @@
             </div>
         </div>
 
-        <div id="current-input">
+        <div class="current-input  animated bounceInRight">
             
             <div><h3>Current Hours:</h3></div>
 
             <div>Activity 1
-                    <form action="#">
-                            <p class="range-field">
-                              <input type="range" id="test5" min="0" max="100" />
-                            </p>
-                          </form>
+                    <div id="slider">
+                            <div id="custom-handle" class="ui-slider-handle"></div>
+                          </div>
+                           
                 
             </div>  
             
