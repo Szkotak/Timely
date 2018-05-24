@@ -6,7 +6,9 @@ var otherTime = 168;
 var goals = [];
 var goalOther = 168;
 
+
 $(document).ready(function () {
+
     $(".button1").on("click", function () {
         if ($("#act1").val() !== "" && $("#act2").val() !== "" && $("#act3").val() !== "" && $("#act4").val() !== "" && $("#act5").val() !== "") {
             for (var i = 1; i < 6; i++) {
@@ -92,6 +94,8 @@ $(document).ready(function () {
 
         });
 
+        $(".outputs").css("visibility", "visible");
+        
         for (var j = 0; j < labels.length; j++) {
             var text = labels[j] + ": " + data[j] + " Hours";
             var newP = $("<p>");
