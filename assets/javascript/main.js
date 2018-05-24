@@ -8,6 +8,68 @@ var goalOther = 168;
 
 
 $(document).ready(function () {
+    if (localStorage.getItem('labels')) {
+        $(".inputs").css("visibility", "hidden");
+        $(".current-input").css("visibility", "hidden");
+        $(".goal-input").css("visibility", "hidden");
+        $(".outputs").css("visibility", "visible");
+
+        data = {
+            datasets: [{
+                data: JSON.parse(localStorage.getItem('currentHours')),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ]
+            }],
+        
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: JSON.parse(localStorage.getItem('labels'))
+        };
+        
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myDoughnutChart1 = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: {}
+        });
+
+        $(".current-doughnut").append(myDoughnutChart1);
+
+        data2 = {
+            datasets: [{
+                data: JSON.parse(localStorage.getItem('goalHours')),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ]
+            }],
+        
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: JSON.parse(localStorage.getItem('labels'))
+        };
+
+        var ctx2 = document.getElementById('myChart2').getContext('2d');
+        var myDoughnutChart2 = new Chart(ctx2, {
+            type: 'doughnut',
+            data: data2,
+            options: {}
+        });
+
+        $(".goal-doughnut").append(myDoughnutChart2);
+
+
+    } else {
+        console.log("False");
+    }
 
     $(".button1").on("click", function () {
         if ($("#act1").val() !== "" && $("#act2").val() !== "" && $("#act3").val() !== "" && $("#act4").val() !== "" && $("#act5").val() !== "") {
@@ -121,7 +183,7 @@ $(document).ready(function () {
 
         data = {
             datasets: [{
-                data: data,
+                data: JSON.parse(localStorage.getItem('currentHours')),
                 backgroundColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
@@ -133,7 +195,7 @@ $(document).ready(function () {
             }],
         
             // These labels appear in the legend and in the tooltips when hovering different arcs
-            labels: labels
+            labels: JSON.parse(localStorage.getItem('labels'))
         };
         
         var ctx = document.getElementById('myChart').getContext('2d');
@@ -147,7 +209,7 @@ $(document).ready(function () {
 
         data2 = {
             datasets: [{
-                data: goals,
+                data: JSON.parse(localStorage.getItem('goalHours')),
                 backgroundColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
@@ -159,7 +221,7 @@ $(document).ready(function () {
             }],
         
             // These labels appear in the legend and in the tooltips when hovering different arcs
-            labels: labels
+            labels: JSON.parse(localStorage.getItem('labels'))
         };
 
         var ctx2 = document.getElementById('myChart2').getContext('2d');
