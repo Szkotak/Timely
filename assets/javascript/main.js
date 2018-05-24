@@ -81,15 +81,18 @@ $(document).ready(function () {
 
         });
 
-        var newDiv = $("<div>")
-        newDiv.attr("class", "current-breakdown");
-        $(".current-breakdown").css("border", "1px solid black");
-        $(".current-info").append($(".current-breakdown"));
         for (var j = 0; j < labels.length; j++) {
             var text = labels[j] + ": " + data[j] + " Hours";
             var newP = $("<p>");
             $(newP).text(text);
-            $(".current-breakdown").append(newP); 
+            $(".current-info").append(newP); 
+        }
+
+        for (var k = 0; k < labels.length; k++) {
+            var text2 = labels[k] + ": " + goals[k] + " Hours";
+            var newP2 = $("<p>");
+            $(newP2).text(text2);
+            $(".goal-info").append(newP2); 
         }
         // $(".goal-input").attr("class", "animated bounceOutLeft");
         // $(".container").prepend($(".goal-input").animate("bounceInRight"));
