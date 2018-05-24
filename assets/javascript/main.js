@@ -97,6 +97,58 @@ $( document ).ready(function() {
         // $(".goal-input").attr("class", "animated bounceOutLeft");
         // $(".container").prepend($(".goal-input").animate("bounceInRight"));
         // $(".current-input").attr("class", "animated bounceInRight");
+
+        data = {
+            datasets: [{
+                data: data,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ]
+            }],
+        
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: labels
+        };
+        
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myDoughnutChart1 = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: {}
+        });
+
+        $(".current-doughnut").append(myDoughnutChart1);
+
+        data2 = {
+            datasets: [{
+                data: goals,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ]
+            }],
+        
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: labels
+        };
+
+        var ctx2 = document.getElementById('myChart2').getContext('2d');
+        var myDoughnutChart2 = new Chart(ctx2, {
+            type: 'doughnut',
+            data: data2,
+            options: {}
+        });
+
+        $(".goal-doughnut").append(myDoughnutChart2);
     });
 
 });
