@@ -3,9 +3,11 @@
 var labels = [];
 var data = [];
 var otherTime = 168;
+var goals = [];
+var goalOther = 168;
 
-$( document ).ready(function() {
-    $(".button1").on("click", function(){
+$(document).ready(function () {
+    $(".button1").on("click", function () {
         if ($("#act1").val() !== "" && $("#act2").val() !== "" && $("#act3").val() !== "" && $("#act4").val() !== "" && $("#act5").val() !== "") {
             for (var i = 1; i < 6; i++) {
                 var activity = $("#act" + i).val();
@@ -14,7 +16,7 @@ $( document ).ready(function() {
             labels.push("Other");
             console.log(labels);
             $(".inputs").attr("class", "animated hinge")
-            $(".container").prepend($(".current-input").animate("bounceInRight"));
+            $(".container").append($(".current-input").animate("bounceInRight"));
             // $(".current-input").attr("class", "animated bounceInRight");
 
             $("#Activity1").text(labels[0]);
@@ -25,7 +27,7 @@ $( document ).ready(function() {
         } else {
             console.log("empty");
         }
-       
+
     });
 
     // $( function() {
@@ -40,10 +42,10 @@ $( document ).ready(function() {
     //     });
     // });
 
-    $(".button2").on("click", function(){
+    $(".button2").on("click", function () {
         for (var i = 1; i < 6; i++) {
             var hours = $("#slider" + i).val();
-            otherTime -= hours
+            otherTime -= hours;
             data.push(parseInt(hours));
         }
         data.push(otherTime);
@@ -52,13 +54,25 @@ $( document ).ready(function() {
         $(".container").prepend($(".goal-input").animate("bounceInRight"));
         // $(".current-input").attr("class", "animated bounceInRight");
 
-        $("#Activity1").text(labels[0]);
-        $("#Activity2").text(labels[1]);
-        $("#Activity3").text(labels[2]);
-        $("#Activity4").text(labels[3]);
-        $("#Activity5").text(labels[4]);
+        // $("#Activity1").text(labels[0]);
+        // $("#Activity2").text(labels[1]);
+        // $("#Activity3").text(labels[2]);
+        // $("#Activity4").text(labels[3]);
+        // $("#Activity5").text(labels[4]);
     });
 
+    $(".button3").on("click", function () {
+        for (var i = 6; i < 11; i++) {
+            var goalHours = $("#slider" + i).val();
+            goalOther -= goalHours;
+            goals.push(parseInt(goalHours));
+        }
+        goals.push(goalOther);
+        console.log(goals);
+        $(".goal-input").attr("class", "animated hinge")
+        // $(".container").prepend($(".goal-input").animate("bounceInRight"));
+        // $(".current-input").attr("class", "animated bounceInRight");
+    });
 
 });
  //**Find a way to distinguish bewtween the current and goal arrays */
