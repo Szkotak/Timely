@@ -1,117 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <meta charset="utf-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Timely</title>
-   <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
-   <link rel = "stylesheet"
-      href = "https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link rel = "stylesheet"
-      href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-   <script type = "text/javascript"
-      src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-   <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-   </script> 
-
-   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-   <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-   <script src="./assets/javascript/main.js"></script>
-
-   <link rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
-
-   <!-- Slider -->
-   
-  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
- 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timely</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Animate CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
 </head>
 
 <body>
-        <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-        <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <div class="header">
-            <nav>
-                    <div class="nav-wrapper teal lighten-1">
-                      <a href="#" class="brand-logo" style= "padding-left: 50px">Timely</a>
-                    </div>
-                  </nav>
+        <nav>
+            <div class="nav-wrapper teal lighten-1">
+                <a href="#" class="brand-logo" style="padding-left: 50px">Timely</a>
+            </div>
+        </nav>
 
     </div>
     <div class="container">
-        <div class="inputs"> 
+        <div class="inputs">
             <!-- how to make it on click -->
             <div class="Question">
-            <p id="activeQuestion"><h3>What are your top 5 Weekly Activities</h3>(e.g. Sleep, Work, ect.)</p>
+                <p id="activeQuestion">
+                    <h3>What are your top 5 Weekly Activities</h3>(e.g. Sleep, Work, ect.)</p>
             </div>
             <div class="row init-input">
-             <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                      <input id="act1" type="email">
-                      <label for="act1" id="hours1">Activity 1</label>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="act1" type="email">
+                            <label for="act1" id="hours1">Activity 1</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="act2" type="email">
-                        <label for="act2" id="hours2">Activity 2</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="act2" type="email">
+                            <label for="act2" id="hours2">Activity 2</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="act3" type="email">
-                        <label for="act3" id="hours3">Activity 3</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="act3" type="email">
+                            <label for="act3" id="hours3">Activity 3</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="act4" type="email">
-                        <label for="act4" id="hours4">Activity 4</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="act4" type="email">
+                            <label for="act4" id="hours4">Activity 4</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="act5" type="email">
-                        <label for="act5" id="hours5">Activity 5</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="act5" type="email">
+                            <label for="act5" id="hours5">Activity 5</label>
+                        </div>
                     </div>
-                </div>
-                <a class="button1 waves-effect waves-light btn-large"><i class="material-icons right">chevron_right</i>Submit</a>
+                    <a class="button1 waves-effect waves-light btn-large">
+                        <i class="material-icons right">chevron_right</i>Submit</a>
                 </form>
             </div>
         </div>
 
         <div class="current-input">
-            
-            <div><h3>How much time do you spend on:</h3></div>
+
+            <div>
+                <h3>How much time do you spend on:</h3>
+            </div>
 
             <div>
                 <h5 id="Activity1">Activity 1</h5>
                 <p class="range-field">
                     <input type="range" id="slider1" min="0" max="60" />
                 </p>
-                           
-                
-            </div>  
-            
+
+
+            </div>
+
             <div>
-                <h5 id="Activity2">Activity 2</h5> 
+                <h5 id="Activity2">Activity 2</h5>
                 <form action="#">
                     <p class="range-field">
-                         <input type="range" id="slider2" min="0" max="60" />
-                     </p>
+                        <input type="range" id="slider2" min="0" max="60" />
+                    </p>
                 </form>
             </div>
-            
+
             <div>
                 <h5 id="Activity3">Activity 3</h5>
                 <p class="range-field">
@@ -121,7 +101,7 @@
             <div>
                 <h5 id="Activity4">Activity 4</h5>
                 <p class="range-field">
-                     <input type="range" id="slider4" min="0" max="60" />
+                    <input type="range" id="slider4" min="0" max="60" />
                 </p>
             </div>
             <div>
@@ -130,56 +110,79 @@
                     <input type="range" id="slider5" min="0" max="60" />
                 </p>
             </div>
-            <a class="button2 waves-effect waves-light btn-large"><i class="material-icons right">chevron_right</i>Submit</a>
+            <a class="button2 waves-effect waves-light btn-large">
+                <i class="material-icons right">chevron_right</i>Submit</a>
         </div>
 
         <div class="goal-input">
-            
-                <div><h3>How much time do you want spend on:</h3></div>
-    
-                <div>
-                    <h5 id="Activity1">Activity 1</h5>
-                    <p class="range-field">
-                        <input type="range" id="slider1" min="0" max="60" />
-                    </p>
-                               
-                    
-                </div>  
-                
-                <div>
-                    <h5 id="Activity2">Activity 2</h5> 
-                    <form action="#">
-                        <p class="range-field">
-                             <input type="range" id="slider2" min="0" max="60" />
-                         </p>
-                    </form>
-                </div>
-                
-                <div>
-                    <h5 id="Activity3">Activity 3</h5>
-                    <p class="range-field">
-                        <input type="range" id="slider3" min="0" max="60" />
-                    </p>
-                </div>
-                <div>
-                    <h5 id="Activity4">Activity 4</h5>
-                    <p class="range-field">
-                         <input type="range" id="slider4" min="0" max="60" />
-                    </p>
-                </div>
-                <div>
-                    <h5 id="Activity5">Activity 5</h5>
-                    <p class="range-field">
-                        <input type="range" id="slider5" min="0" max="60" />
-                    </p>
-                </div>
-                <a class="button2 waves-effect waves-light btn-large"><i class="material-icons right">chevron_right</i>Submit</a>
+
+            <div>
+                <h3>How much time do you want spend on:</h3>
             </div>
-        
+
+            <div>
+                <h5 id="Activity6">Activity 1</h5>
+                <p class="range-field">
+                    <input type="range" id="slider6" min="0" max="60" />
+                </p>
+
+
+            </div>
+
+            <div>
+                <h5 id="Activity7">Activity 2</h5>
+                <form action="#">
+                    <p class="range-field">
+                        <input type="range" id="slider7" min="0" max="60" />
+                    </p>
+                </form>
+            </div>
+
+            <div>
+                <h5 id="Activity8">Activity 3</h5>
+                <p class="range-field">
+                    <input type="range" id="slider8" min="0" max="60" />
+                </p>
+            </div>
+            <div>
+                <h5 id="Activity9">Activity 4</h5>
+                <p class="range-field">
+                    <input type="range" id="slider9" min="0" max="60" />
+                </p>
+            </div>
+            <div>
+                <h5 id="Activity10">Activity 5</h5>
+                <p class="range-field">
+                    <input type="range" id="slider10" min="0" max="60" />
+                </p>
+            </div>
+            <a class="button3 waves-effect waves-light btn-large">
+                <i class="material-icons right">chevron_right</i>Submit</a>
+        </div>
+        <div class="outputs row">
+            <div class="current-info col s3">
+                <p>You currently spend your time in this way</p>
+            </div>
+            <div class="current-donut col s3">
+                <p>Breakdown of Current Time Usage</p>
+            </div>
+            <div class="goal-donut col s3">
+                <p>Breakdown of Desired Time Usage</p>
+            </div>
+            <div class="goal-info col s3">
+                <p>You Want to spend your time in the following way</p>
+            </div>
+        </div>
+
 
     </div>
 
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
+    <!-- End of Body -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    <script src="./assets/javascript/main.js"></script>
 </body>
+
 </html>
