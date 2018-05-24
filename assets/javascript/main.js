@@ -31,6 +31,11 @@ $(document).ready(function () {
         } else {
             console.log("empty");
         }
+        localStorage.setItem('labels', JSON.stringify(labels));
+
+        localData = JSON.parse(localStorage.getItem('labels'));
+    
+        console.log(localData);
 
     });
 
@@ -67,6 +72,12 @@ $(document).ready(function () {
         $("#Activity8").text(labels[2]);
         $("#Activity9").text(labels[3]);
         $("#Activity10").text(labels[4]);
+
+        localStorage.setItem('currentHours', JSON.stringify(data));
+
+        localData = JSON.parse(localStorage.getItem('currentHours'));
+    
+        console.log(data);
     });
 
     $(".button3").on("click", function(){
@@ -97,6 +108,12 @@ $(document).ready(function () {
         // $(".goal-input").attr("class", "animated bounceOutLeft");
         // $(".container").prepend($(".goal-input").animate("bounceInRight"));
         // $(".current-input").attr("class", "animated bounceInRight");
+
+        localStorage.setItem('goalHours', JSON.stringify(goals));
+
+        localData = JSON.parse(localStorage.getItem('goalHours'));
+    
+        console.log(data);
 
         data = {
             datasets: [{
@@ -150,6 +167,19 @@ $(document).ready(function () {
 
         $(".goal-doughnut").append(myDoughnutChart2);
     });
+
+    siteData = {
+        // userActivities: 'labels',
+        test:"this is a test"
+    }
+    // localData ();
+
+    // localStorage.setItem('labels', JSON.stringify(labels));
+
+    // localData = JSON.parse(localStorage.getItem('labels'));
+
+    // console.log(localData);
+
 
 });
 
