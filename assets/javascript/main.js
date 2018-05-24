@@ -152,6 +152,9 @@ $(document).ready(function () {
     });
 
 });
+
+//sessionStorage.setItem(key,value);
+
  //**Find a way to distinguish bewtween the current and goal arrays */
 
 
