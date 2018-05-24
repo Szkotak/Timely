@@ -6,8 +6,8 @@ var otherTime = 168;
 var goals = [];
 var goalOther = 168;
 
-$( document ).ready(function() {
-    $(".button1").on("click", function(){
+$(document).ready(function () {
+    $(".button1").on("click", function () {
         if ($("#act1").val() !== "" && $("#act2").val() !== "" && $("#act3").val() !== "" && $("#act4").val() !== "" && $("#act5").val() !== "") {
             for (var i = 1; i < 6; i++) {
                 var activity = $("#act" + i).val();
@@ -31,7 +31,7 @@ $( document ).ready(function() {
         } else {
             console.log("empty");
         }
-       
+
     });
 
     // $( function() {
@@ -46,10 +46,10 @@ $( document ).ready(function() {
     //     });
     // });
 
-    $(".button2").on("click", function(){
+    $(".button2").on("click", function () {
         for (var i = 1; i < 6; i++) {
             var hours = $("#slider" + i).val();
-            otherTime -= hours
+            otherTime -= hours;
             data.push(parseInt(hours));
         }
         data.push(otherTime);

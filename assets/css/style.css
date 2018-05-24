@@ -1,7 +1,7 @@
-.container {
+/* .container {
     width: 960px;
     text-align: center;
-}
+} */
 
 .inputs {
     width: 960px;
@@ -70,10 +70,48 @@
     border-color: lightgrey;
     margin: 70px auto;
     text-align: center;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+    padding: 10px;
     position: absolute;
     top: 70px;
     z-index: 2;
+}
+
+.current-info {
+    background-color: white;
+    border-style: solid;
+    border-color: lightgrey;
+    padding: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+.current-donut {
+    background-color: white;
+    /* border: 1px; */
+    border-style: solid;
+    border-color: lightgrey;
+    padding: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+.goal-donut {
+    background-color: white;
+    /* border: 1px; */
+    border-style: solid;
+    border-color: lightgrey;
+    padding: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.goal-info {
+    background-color: white;
+    /* border: 1px; */
+    border-style: solid;
+    border-color: lightgrey;
+    padding: 5px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .range-field {
