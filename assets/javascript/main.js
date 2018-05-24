@@ -15,10 +15,14 @@ $(document).ready(function () {
             }
             labels.push("Other");
             console.log(labels);
-            $(".inputs").attr("class", "animated hinge")
-            $(".container").append($(".current-input").animate("bounceInRight"));
-            // $(".current-input").attr("class", "animated bounceInRight");
+            $(".inputs").fadeOut(500, function(){
 
+            });
+            // $(".inputs").attr("class", "animated hinge");
+            // $(".container").prepend($(".current-input").animate("bounceInRight"));
+            // $(".current-input").attr("class", "animated bounceInRight");
+            
+            
             $("#Activity1").text(labels[0]);
             $("#Activity2").text(labels[1]);
             $("#Activity3").text(labels[2]);
@@ -50,18 +54,22 @@ $(document).ready(function () {
         }
         data.push(otherTime);
         console.log(data);
-        $(".current-input").attr("class", "animated hinge")
-        $(".container").prepend($(".goal-input").animate("bounceInRight"));
-        // $(".current-input").attr("class", "animated bounceInRight");
+        $(".current-input").fadeOut(500, function(){
 
-        // $("#Activity1").text(labels[0]);
-        // $("#Activity2").text(labels[1]);
-        // $("#Activity3").text(labels[2]);
-        // $("#Activity4").text(labels[3]);
-        // $("#Activity5").text(labels[4]);
+        });
+        // $(".current-input").attr("class", "animated bounceOutLeft");
+        // $(".container").prepend($(".goal-input").animate("bounceInRight"));
+        // $(".goal-input").attr("class", "animated bounceInRight");
+       
+
+        $("#Activity6").text(labels[0]);
+        $("#Activity7").text(labels[1]);
+        $("#Activity8").text(labels[2]);
+        $("#Activity9").text(labels[3]);
+        $("#Activity10").text(labels[4]);
     });
 
-    $(".button3").on("click", function () {
+    $(".button3").on("click", function(){
         for (var i = 6; i < 11; i++) {
             var goalHours = $("#slider" + i).val();
             goalOther -= goalHours;
@@ -69,7 +77,21 @@ $(document).ready(function () {
         }
         goals.push(goalOther);
         console.log(goals);
-        $(".goal-input").attr("class", "animated hinge")
+        $(".goal-input").fadeOut(500, function(){
+
+        });
+
+        var newDiv = $("<div>")
+        newDiv.attr("class", "current-breakdown");
+        $(".current-breakdown").css("border", "1px solid black");
+        $(".current-info").append($(".current-breakdown"));
+        for (var j = 0; j < labels.length; j++) {
+            var text = labels[j] + ": " + data[j] + " Hours";
+            var newP = $("<p>");
+            $(newP).text(text);
+            $(".current-breakdown").append(newP); 
+        }
+        // $(".goal-input").attr("class", "animated bounceOutLeft");
         // $(".container").prepend($(".goal-input").animate("bounceInRight"));
         // $(".current-input").attr("class", "animated bounceInRight");
     });
@@ -86,3 +108,4 @@ $(document).ready(function () {
 //move to next window to set goals
 // once goals are set input data into box
 //create donut chart for the variables for the current and goal time
+
