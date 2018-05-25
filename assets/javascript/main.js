@@ -66,6 +66,8 @@ $(document).ready(function () {
 
         $(".goal-doughnut").append(myDoughnutChart2);
 
+        $(".current-info").empty();
+        $(".goal-info").empty();
 
     } else {
         console.log("False");
