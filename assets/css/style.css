@@ -1,4 +1,6 @@
-
+.brand-logo {
+    font-family: 'Pacifico', cursive;
+}
 .inputs {
     width: 960px;
     height: auto;
